@@ -5,19 +5,26 @@
 
 int main(int argc, char *argv[]) {
 
-	int sum=0;//0으로 초기화 누적이니까 
-	int x; 
-	int i; 
+	int x,y; //두개의 입력 정수   
+	char op; //연산자 문자  
+	int result;// 연산 결과 저장   
 	
-	printf("정수를 입력하시오.");
-	scanf("%d", &x); 
+	//두개의 입력정수, 한개의 연산자 문자 입력 받기  
+	printf("enter the calculation");
+	scanf("%d %c %d", &x, &op, &y); 
 	
-	
-	//for 문을 활용해서 1부터 x까지 sum에 더하는 코드 
-    for (i=0;i<=x ;i++ ) //반복 (초기식; 조건식; 증감식;)
-        sum=sum+ i;	//더하기  
+	//연산자에 따라 결과값을 계산(result에 저장 ) 
+	if (op == '+') //+인 경우 
+	result = x+y;
+	else if (op == '-')
+	result = x-y;//-인 경우  
+	else if (op == '*')// *인 경우  
+	result = x*y;
+	else // /인 경우 
+	result = x/y;  
 	 
-	printf("더하기 결과는  %i 입니다. \n", sum ); // 결과 출력 
+	 //printf로 출력   
+	printf("=  %i \n", result ); 
 	
 	
 	return 0;

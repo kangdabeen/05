@@ -11,14 +11,11 @@ int main(int argc, char *argv[]) {
 	scanf ("%d", &x);
 	
 	
-	if(x>0)//양수인 경우
-	printf("양수입니다.\n");
+	if(x<0)//음수인 경우
+	 x=-1*x; 
+	 
+	printf("절대값은 %i입니다.\n", x);
 	
-	else if(x<0)//음수인 경 
-	printf("음수 입니다.\n");
-
-	else //0인경우 
-	printf("0입니다.\n");
 	
 	
 	return 0;

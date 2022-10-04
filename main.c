@@ -5,27 +5,27 @@
 
 int main(int argc, char *argv[]) {
 
-	int x,y; //두개의 입력 정수   
-	char op; //연산자 문자  
-	int result;// 연산 결과 저장   
+	int answer=59;
+	int x;
+	int trial = 0; 
 	
-	//두개의 입력정수, 한개의 연산자 문자 입력 받기  
-	printf("enter the calculation");
-	scanf("%d %c %d", &x, &op, &y); 
+	do 
+	{
+	printf("Guess a number");	//입력해라 문구 출력
+    scanf("%d", &x);
+	trial ++;//입력을 받음
 	
-	//연산자에 따라 결과값을 계산(result에 저장 ) 
-	if (op == '+') //+인 경우 
-	result = x+y;
-	else if (op == '-')
-	result = x-y;//-인 경우  
-	else if (op == '*')// *인 경우  
-	result = x*y;
-	else // /인 경우 
-	result = x/y;  
-	 
-	 //printf로 출력   
-	printf("=  %i \n", result ); 
+	  if (x>answer)
+	  printf("high\n");
+	  
+	  if (x<answer)
+	  printf("low\n"); //입력숫자가 정답보다 큰지 작은지 출력  
+	}
+	while (x!=answer);// 정답과 같은지 여부 판단  
 	
+
+	
+	printf("Number of trial = %i\n", trial);	//시도 횟수 출력  
 	
 	return 0;
 }

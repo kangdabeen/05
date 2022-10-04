@@ -5,16 +5,20 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x;
+	char c;
+	int num=0; //count 
 	
-	printf("정수 하나를 입력하시오. : ");
-	scanf ("%d", &x);
+	printf("문자열을 입력하세요 . ");
+	
+	while ( (c=getchar()) != '\n')//입력 문자가 개형문자가 나올떄까지 반복 
+	{
+		if( c >= '0' && c<= '9')
+	     //입력된 글자(c)가 숫자인가? 
+	    num=num+1;	// 그렇다면 하나를 센다.  
+	}
 	
 	
-	if(x<0)//음수인 경우
-	 x=-1*x; 
-	 
-	printf("절대값은 %i입니다.\n", x);
+	printf("숫자의 개수는  %i개 입니다. \n", num );//출력  
 	
 	
 	

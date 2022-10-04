@@ -4,22 +4,20 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
+
+	int sum=0;//0으로 초기화 누적이니까 
+	int x; 
+	int i; 
 	
-	char c;
-	int num=0; //count 
-	
-	printf("문자열을 입력하세요 . ");
-	
-	while ( (c=getchar()) != '\n')//입력 문자가 개형문자가 나올떄까지 반복 
-	{
-		if( c >= '0' && c<= '9')
-	     //입력된 글자(c)가 숫자인가? 
-	    num=num+1;	// 그렇다면 하나를 센다.  
-	}
+	printf("정수를 입력하시오.");
+	scanf("%d", &x); 
 	
 	
-	printf("숫자의 개수는  %i개 입니다. \n", num );//출력  
-	
+	//for 문을 활용해서 1부터 x까지 sum에 더하는 코드 
+    for (i=0;i<=x ;i++ ) //반복 (초기식; 조건식; 증감식;)
+        sum=sum+ i;	//더하기  
+	 
+	printf("더하기 결과는  %i 입니다. \n", sum ); // 결과 출력 
 	
 	
 	return 0;
